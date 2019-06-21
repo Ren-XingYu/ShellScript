@@ -11,7 +11,7 @@ lsmod | grep bbr
 # SSR
 
 ```
-wget https://github.com/Ren-XingYu/ShellScript/blob/master/ssr.sh
+wget https://github.com/Ren-XingYu/ShellScript/raw/master/ssr.sh
 chmod +x ssr.sh
 ./ssr.sh
 ```
