@@ -22,3 +22,11 @@ chmod +x ssr.sh
 wget --no-check-certificate https://github.com/Ren-XingYu/ShellScript/raw/master/CentOS-pptp-setup.sh
 chmod +x ./CentOS-pptp-setup.sh
 ./CentOS-pptp-setup.sh -u username -p password
+```
+
+# V2Ray
+
+```
+wget --no-check-certificate https://github.com/Ren-XingYu/ShellScript/raw/master/v2ray.sh
+chmod +x ./v2ray.sh
+```
