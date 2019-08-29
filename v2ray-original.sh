@@ -124,7 +124,7 @@ downloadV2Ray(){
     rm -rf /tmp/v2ray
     mkdir -p /tmp/v2ray
     if [[ "${DIST_SRC}" == "jsdelivr" ]]; then
-        DOWNLOAD_LINK="https://cdn.jsdelivr.net/gh/v2ray/dist/v2ray-linux-${VDIS}.zip"
+        DOWNLOAD_LINK="https://github.com/Ren-XingYu/ShellScript/raw/master/v2ray-linux-64.zip"
     else
         DOWNLOAD_LINK="https://github.com/Ren-XingYu/ShellScript/raw/master/v2ray-linux-64.zip"
     fi
