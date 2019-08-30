@@ -30,15 +30,3 @@ chmod +x ./CentOS-pptp-setup.sh
 wget --no-check-certificate https://github.com/Ren-XingYu/ShellScript/raw/master/v2ray.sh
 chmod +x ./v2ray.sh
 ```
-
-# V2Ray-Original
-
-```
-wget --no-check-certificate https://github.com/Ren-XingYu/ShellScript/raw/master/v2ray-original.sh
-chmod +x ./v2ray-original.sh
-```
-
-```
-wget --no-check-certificate https://github.com/Ren-XingYu/ShellScript/raw/master/v2ray-linux-64.zip
-chmod +x ./v2ray-original.sh
-```
