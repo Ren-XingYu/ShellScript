@@ -1,0 +1,107 @@
+{
+    "log": {
+        "access": "/var/log/v2ray/access.log",
+        "error": "/var/log/v2ray/error.log",
+        "loglevel": "warning"
+    },
+    "inbound":
+        {
+            "port": 12345,
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "17806366-52c6-c9eb-1272-50bdb126aff9",
+                        "level": 1,
+                        "alterId": 101
+                    }
+                ]
+            }
+        },
+    "outbound": {
+        "protocol": "freedom",
+        "settings": {}
+    },
+    "inboundDetour": [
+        {
+            "port": 23456,
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "27ea4db3-b459-0075-427e-8d2315978bef",
+                        "level": 1,
+                        "alterId": 102
+                    }
+                ]
+            }
+        },
+        {
+            "port": 34567,
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "32799021-08a2-a3ba-9f1b-9c582fb3cf6f",
+                        "level": 1,
+                        "alterId": 103
+                    }
+                ]
+            }
+        },
+        {
+            "port": 10000,
+            "listen": "127.0.0.1",
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "952595f1-9dd8-b114-a2a5-1e704a3698be",
+                        "alterId": 109
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+		"wsSettings": {
+        "path": "/ray"
+        }
+                }
+        }
+    ],
+    "outboundDetour": [
+        {
+            "protocol": "blackhole",
+            "settings": {},
+            "tag": "blocked"
+        }
+    ],
+    "routing": {
+        "strategy": "rules",
+        "settings": {
+            "rules": [
+                {
+                    "type": "field",
+                    "ip": [
+                        "0.0.0.0/8",
+                        "10.0.0.0/8",
+                        "100.64.0.0/10",
+                        "127.0.0.0/8",
+                        "169.254.0.0/16",
+                        "172.16.0.0/12",
+                        "192.0.0.0/24",
+                        "192.0.2.0/24",
+                        "192.168.0.0/16",
+                        "198.18.0.0/15",
+                        "198.51.100.0/24",
+                        "203.0.113.0/24",
+                        "::1/128",
+                        "fc00::/7",
+                        "fe80::/10"
+                    ],
+                    "outboundTag": "blocked"
+                }
+            ]
+        }
+    }
+}

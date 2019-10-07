@@ -1,0 +1,48 @@
+{
+    "log": {
+        "access": "D:\\V2Ray\\access.log",
+        "error": "D:\\V2Ray\\error.log",
+        "loglevel": "warning"
+    },
+  "inbounds": [
+    {
+      "port": 1080,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": ["http", "tls"]
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": false
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "ai.renxingyu.ml",
+            "port": 443,
+            "users": [
+              {
+                "id": "952595f1-9dd8-b114-a2a5-1e704a3698be",
+                "alterId": 109
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+		"wsSettings": {
+        "path": "/ray"
+        }
+        }
+      }
+  ]
+}

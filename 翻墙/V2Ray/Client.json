@@ -1,0 +1,85 @@
+{
+    "log": {
+        "access": "D:\\V2Ray\\access.log",
+        "error": "D:\\V2Ray\\error.log",
+        "loglevel": "warning"
+    },
+    "api": {},
+    "dns": {},
+    "stats": {},
+    "routing": {},
+    "policy": {},
+    "reverse": {},
+    "inbounds": [
+        {
+            "port": 1080,
+            "listen": "127.0.0.1",
+            "protocol": "socks",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ]
+            },
+            "settings": {
+                "auth": "noauth",
+                "udp": true
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "144.202.13.110",
+                        "port": 12345,
+                        "users": [
+                            {
+                                "id": "17806366-52c6-c9eb-1272-50bdb126aff9",
+                                "alterId": 101,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp"
+            },
+            "mux": {
+                "enabled": true
+            }
+        },
+        {
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "ai.renxingyu.ml",
+                        "port": 443,
+                        "users": [
+                            {
+                                "id": "27ea4db3-b459-0075-427e-8d2315978bef",
+                                "alterId": 102
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "wsSettings": {
+                    "path": "/ws"
+                }
+            },
+            "mux": {
+                "enabled": true
+            }
+        }
+    ],
+    "transport": {}
+}
